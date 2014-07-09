@@ -180,23 +180,4 @@
     };
   })();
 
-  (function($) {
-    return $.fn.extend({
-      wallStream: function(options) {
-        return this.each(function() {
-          var $this, wallstream;
-          $this = $(this);
-          $this.on("wallstream.destroyed", function() {
-            return $this.data("wallstream", null);
-          });
-          if (wallstream = $this.data("wallstream")) {
-            wallstream.destroy();
-          }
-          $this.data("wallstream", new WallStream($this, options));
-          return $this;
-        });
-      }
-    });
-  })(jQuery);
-
 }).call(this);
