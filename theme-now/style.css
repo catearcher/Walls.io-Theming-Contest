@@ -76,6 +76,10 @@ input {
   background-size: 86px 35px;
 }
 
+input:focus {
+  background-image: none;
+}
+
 .wall {
   display: block;
   position: relative;
