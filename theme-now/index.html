@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Walls.io Theming Contest: Codename "WallStream Now"</title>
+  <script src="../common/jquery-2.1.1.min.js"></script>
+  <script src="../common/wallstream.jquery.js"></script>
+
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wall"></div>
+
+  <script type="text/html" id="post-template">
+  <div data-id="<%=id%>>" class="post post-<%=type%>" data-type="<%=type%>">
+    <strong><%=external_name%></strong>
+    <%=comment%>
+
+    <% if (post_image) { %>
+    <img src="<%=post_image%>">
+    <% } %>
+
+    <small><%=type%></small>
+  </div>
+  </script>
+
+  <script src="magic.js"></script>
+</body>
+</html>
