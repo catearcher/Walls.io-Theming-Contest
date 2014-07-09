@@ -16,7 +16,13 @@
     return post;
   },
   insertPost = function(post) {
-    $(".wall").prepend(createPostHtml(post));
+    var $post = $(createPostHtml(post));
+
+    $(".wall").prepend($post);
+
+    setTimeout(function() {
+      $post.removeClass("post-animated");
+    }, 2000);
   },
   pruneOldPosts = function() {
     $(".post").slice(10).remove();
@@ -32,4 +38,15 @@
       pruneOldPosts();
     }
   });
+
+  $(document).on("dblclick", ".post", function() {
+    var $post = $(this).addClass("post-removed");
+
+
+    setTimeout(function() {
+      $post.remove();
+    }, 700);
+  });
+
+  window.stream = stream;
 }());
