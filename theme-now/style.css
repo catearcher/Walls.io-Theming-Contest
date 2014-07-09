@@ -22,7 +22,8 @@
 }
 
 body {
-  padding: 20px;
+  margin: 0;
+  padding: 0 20px;
 
   background-color: #222;
 }
@@ -45,29 +46,50 @@ small {
   display: none;
 }
 
+header {
+  width: 100%;
+  max-width: 640px;
+  height:10rem;
+  margin: 0 auto;
+  padding-top: 6rem;
+
+  background:url(header.png) center top;
+  background-size:cover;
+}
+
+input {
+  display: block;
+
+  width: 85%;
+  margin: 0 auto;
+  padding:.75rem 1rem;
+  border: 0;
+  border-radius: 3px;
+
+  box-shadow: 0 1px 2px #aaa;
+
+  font-size: 1.2rem;
+}
+
 .wall {
   display: block;
   position: relative;
 
   width: 100%;
   max-width: 640px;
-  margin: 3vh auto;
+  min-height: 15rem;
+
+  margin: 0 auto;
   padding: 1.5rem 0 0;
-  border-radius: .25rem;
+
+  border-radius: 0 0 .25rem .25rem;
 
   overflow: hidden;
 
   background: #d5d5d5;
 }
 
-.wall:empty {
-  display: none;
-}
-
 .post {
-  position: relative;
-  z-index: 2;
-
   margin: 0 1rem 1rem;
   padding: 1.5rem;
   border-radius: 3px;
