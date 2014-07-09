@@ -14,6 +14,10 @@
     onPost: function(post) {
       console.log(post);
 
+      if (post.comment.length > 80) {
+        post.comment = post.comment.substr(0, 77) + "…";
+      }
+
       $(".wall")
       .prepend(createPostHtml(post))
       .find(".post").slice(20).remove();
