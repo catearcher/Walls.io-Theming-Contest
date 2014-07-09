@@ -51,7 +51,7 @@ header {
   max-width: 640px;
   height:10rem;
   margin: 0 auto;
-  padding-top: 6rem;
+  padding: 1rem 1rem 0;
 
   background:url(header.png) center top;
   background-size:cover;
