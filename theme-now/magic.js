@@ -9,8 +9,8 @@
     return WallStream.tmpl($("#post-template").html(), post);
   },
   preparePost = function(post) {
-    if (post.comment.length > 80) {
-      post.comment = post.comment.substr(0, 77) + "…";
+    if (post.comment && post.comment.length > 100) {
+      post.comment = post.comment.substr(0, 97) + "…";
     }
 
     return post;
@@ -19,7 +19,7 @@
     $(".wall").prepend(createPostHtml(post));
   },
   pruneOldPosts = function() {
-    $(".post").slice(20).remove();
+    $(".post").slice(10).remove();
   },
   stream = new WallStreamCore({
     accessToken: "5f864451221b0e8d2ff61b3179ac1a3b5d4ac9e3",
