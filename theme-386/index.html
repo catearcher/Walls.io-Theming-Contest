@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Walls.io Theming Contest: Wall 386"</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <script src="../common/jquery-2.1.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="../common/wallstream.js"></script>
+</head>
+<body>
+  <div class="monitor">
+    <div class="wall"></div>
+  </div>
+
+
+  <script type="text/html" id="post-template">
+  <div data-id="<%=id%>>" class="post post-<%=type%> media" data-type="<%=type%>">
+    <% if (post_image) { %>
+    <img src="<%=post_image%>" class="media-object pull-left">
+    <% } %>
+
+    <div class="media-body">
+      <span class="label label-warning pull-right"><%=type%></span>
+      <h4 class="media-heading"><%=external_name%></h4>
+      <%=comment%>
+    </div>
+  </div>
+  </script>
+
+  <script src="magic.js"></script>
+</body>
+</html>
