@@ -24,7 +24,7 @@
     $(".post").slice(10).remove();
   },
   stream = new WallStreamCore({
-    accessToken: "5f864451221b0e8d2ff61b3179ac1a3b5d4ac9e3",
+    wallId: 13228,
     onPost: function(post) {
       console.log(post);
 
