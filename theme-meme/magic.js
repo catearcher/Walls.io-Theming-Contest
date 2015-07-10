@@ -49,6 +49,16 @@
     });
   };
 
+  var scaleMeme = function() {
+    var $body = $("body");
+    var $container = $(".meme-container");
+    var heightScalability = $body.height() / $container.height();
+    var widthScalability = $body.width() / $container.width();
+    var scale = Math.min(heightScalability, widthScalability);
+
+    $container.css("transform", "scale(" + scale + ")");
+  };
+
   var stream = new WallStreamCore({
     wallId: 14245,
     host: "beta.walls.io",
@@ -90,7 +100,10 @@
   };
 
   setInterval(makeFunny, 3000);
+  $(window).resize(scaleMeme);
+
   makeFunny();
+  scaleMeme();
 
   window.stream = stream;
 }());
