@@ -1,0 +1,45 @@
+html, body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meme-container {
+  font-family: Impact;
+  font-size: 55px;
+  line-height: 1.1;
+  color: white;
+  word-break: break-all;
+  -webkit-text-stroke: 2px black;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, .7);
+
+  width: 600px;
+  height: 400px;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.line-1, .line-2 {
+  position: absolute;
+  left: 3%;
+  width: 90%;
+}
+
+.line-1 {
+  top: 3%;
+}
+
+.line-2 {
+  bottom: 3%;
+}
