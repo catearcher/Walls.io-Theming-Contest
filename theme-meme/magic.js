@@ -84,6 +84,8 @@
 
     if (lines.length > 1) {
       $line2.text(lines[1]);
+    } else {
+      $line2.text("");
     }
   };
 
